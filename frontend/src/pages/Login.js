@@ -13,11 +13,34 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { useNavigate } from 'react-router-dom';
 
 const defaultTheme = createTheme();
 
 
+
+
 function Login() {
+  const navigate = useNavigate();
+
+  const handleLogin = async (event) => {
+    event.preventDefault();
+    try {
+      navigate('/home');
+
+      // const response = await login({ username, password });
+      
+      // Handle response data
+      // console.log('User logged in successfully:', response);
+      
+      // Redirect to another page or update the state as necessary
+    } catch (error) {
+      // Handle errors such as invalid login credentials
+      console.error('Login failed:', error);
+    }
+  };
+
+
   return (
     <ThemeProvider theme={defaultTheme}>
       <Container component="main" maxWidth="xs">
@@ -34,7 +57,7 @@ function Login() {
           <Typography component="h1" variant="h5">
             Login In
           </Typography>
-          <Box component="form" onSubmit={""} noValidate sx={{ mt: 1 }}>
+          <Box component="form" onSubmit={handleLogin} noValidate sx={{ mt: 1 }}>
             <TextField
               margin="normal"
               required
