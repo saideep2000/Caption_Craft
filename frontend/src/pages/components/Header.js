@@ -8,11 +8,14 @@ import { useNavigate } from 'react-router-dom';
 
 const pages = ["Craft", "Posts", "Messages", "Profile", "Settings", "Help"]
 
-function Header() {
-    const [value, setValue] = useState(0);
+function Header({ activeTab }) {
     const theme = useTheme();
     const isMatch = useMediaQuery(theme.breakpoints.down("md"));
     const navigate = useNavigate();
+    const findTabIndex = (tabName) => {
+        return pages.indexOf(tabName);
+    };
+    const [value, setValue] = useState(findTabIndex(activeTab));
     const handleLogin = () => {
         try {
         navigate('/Login');
@@ -29,6 +32,11 @@ function Header() {
         console.error('Login failed:', error);
         }
     }
+    const handleChange = (event, newValue) => {
+        setValue(newValue); // Update the selected tab's value
+        const page = pages[newValue]; // Get the page name based on the index
+        navigate(`/${page}`); // Navigate to the selected page's route
+    };
   return (
     <React.Fragment>
         <AppBar sx = {{background : "black"}}>
@@ -41,7 +49,7 @@ function Header() {
                         </>
                     ) : (
                         <>
-                            <Tabs textColor='inherit' value = {value} onChange={(e,value) => setValue(value)} indicatorColor='white'>
+                            <Tabs textColor='inherit' value = {value} onChange={handleChange} indicatorColor='white'>
                                 {
                                     pages.map((page,index) => (
                                         <Tab key = {index} label = {page}/>

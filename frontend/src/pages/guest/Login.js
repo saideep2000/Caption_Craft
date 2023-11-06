@@ -27,7 +27,7 @@ function Login() {
   const handleLogin = async (event) => {
     event.preventDefault();
     try {
-      navigate('/home');
+      navigate('/Craft');
 
       // const response = await login({ username, password });
       

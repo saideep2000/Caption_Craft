@@ -1,25 +1,24 @@
 import React from 'react';
 import Header from '../components/Header';
-import Poster from '../components/Poster';
 import { Grid } from '@mui/material';
 import Footer from '../components/Footer';
+import DisplayMessage from '../components/DisplayMessage';
 
-function Home() {
+function Messages() {
   return (
     <div style={{ overflow: 'hidden', width: '100%' }}>
       <Grid container direction="column" spacing={8}>
         <Grid item>
-          <Header />
+          <Header activeTab="Messages"/>
         </Grid>
         <Grid item>
-          <Poster />
+          <DisplayMessage message = "Messages"/>
         </Grid>
         <Grid item style={{ marginBottom: '-24px' }}> 
           <Footer />
         </Grid>
       </Grid>
     </div>
-  );
+  )
 }
-
-export default Home;
+export default Messages
