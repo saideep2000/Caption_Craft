@@ -5,7 +5,7 @@ import { Button, Tab, Tabs, Toolbar, useMediaQuery, useTheme } from '@mui/materi
 import DrawerComp from './DrawerComp';
 import IconMini from './IconMini';
 
-const pages = ["Mid Journey", "Posts", "Messages", "Profile", "Settings", "Help"]
+const pages = ["Craft", "Posts", "Messages", "Profile", "Settings", "Help"]
 
 function Header() {
     const [value, setValue] = useState();

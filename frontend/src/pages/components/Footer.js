@@ -49,6 +49,8 @@ function Footer() {
               <Typography>Sitemap</Typography>
             </Grid>
 
+            
+
             {/* Social Media Icons */}
             <Grid item xs={12} md={4} sx={{ display: 'flex', justifyContent: 'flex-end' }}>
               <TwitterIcon sx={{ mx: 1 }} />
