@@ -3,9 +3,9 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
-import SignupPage from './pages/Signup';
-import LoginPage from './pages/Login';
-import HomePage from './pages/Home';
+import SignupPage from './pages/guest/Signup';
+import LoginPage from './pages/guest/Login';
+import HomePage from './pages/guest/Home';
 
 function App() {
   return (

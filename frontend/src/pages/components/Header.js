@@ -9,7 +9,7 @@ import { useNavigate } from 'react-router-dom';
 const pages = ["Craft", "Posts", "Messages", "Profile", "Settings", "Help"]
 
 function Header() {
-    const [value, setValue] = useState();
+    const [value, setValue] = useState(0);
     const theme = useTheme();
     const isMatch = useMediaQuery(theme.breakpoints.down("md"));
     const navigate = useNavigate();
