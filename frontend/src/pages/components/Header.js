@@ -26,7 +26,16 @@ function Header({ activeTab }) {
     }
     const handleSignUp = () => {
         try {
-        navigate('/SignUp');
+            navigate('/SignUp');
+        } catch (error) {
+            // Handle errors such as invalid login credentials
+            console.error('Login failed:', error);
+        }
+    }
+    const handleIcon = () => {
+        console.log("Icon clicked!");
+        try {
+            navigate('/Craft');
         } catch (error) {
         // Handle errors such as invalid login credentials
         console.error('Login failed:', error);
@@ -45,7 +54,7 @@ function Header({ activeTab }) {
                     isMatch ? (
                         <>
                             <DrawerComp/>
-                            <IconMini sx={{ flexGrow: 0, mr: 'auto', ml: 'auto' }}/>
+                            <IconMini onClick = {handleIcon} sx={{ flexGrow: 0, mr: 'auto', ml: 'auto' }}/>
                         </>
                     ) : (
                         <>
@@ -56,7 +65,7 @@ function Header({ activeTab }) {
                                     ))
                                 }
                             </Tabs>
-                            <IconMini sx={{ ml : "215px"}}/>
+                            <IconMini onClick = {handleIcon} sx={{ ml : "265px"}}/>
                             <Button sx = {{
                                 marginLeft : "auto", background : "white", color : "#3c3c3c", mr : "10px", 
                                 '&:hover': {

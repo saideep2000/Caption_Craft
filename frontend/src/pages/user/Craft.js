@@ -4,7 +4,7 @@ import Poster from './components/Poster';
 import { Grid } from '@mui/material';
 import Footer from './components/Footer';
 
-function Home() {
+function Craft() {
   return (
     <div style={{ overflow: 'hidden', width: '100%' }}>
       <Grid container direction="column" spacing={8}>
@@ -22,4 +22,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default Craft;
