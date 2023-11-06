@@ -30,7 +30,7 @@ function Header() {
                                     ))
                                 }
                             </Tabs>
-                            <IconMini sx={{ flexGrow: 0, mr: 'auto', ml: 'auto' }}/>
+                            <IconMini sx={{ ml : "215px"}}/>
                             <Button sx = {{marginLeft : "auto", background : "white", color : "#3c3c3c", mr : "10px"}} varaint = "conatined"> Login </Button>
                             <Button sx = {{marginLeft : "5 px", background : "white", color : "#3c3c3c"}} varaint = "conatined"> Signup </Button>
                         </>
