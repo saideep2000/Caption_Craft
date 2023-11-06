@@ -69,7 +69,13 @@ function Poster() {
           variant="contained" 
           startIcon={<ArrowBackIosIcon />}
           onClick={prevImage}
-          sx={{ position: "absolute", left: 16, top: "50%", transform: "translateY(-50%)", bgcolor:"black"}}
+          sx={{ position: "absolute", left: 16, top: "50%", transform: "translateY(-50%)", bgcolor:"black",
+          '&:hover': {
+            color : "white",
+            backgroundColor: 'green',
+          },
+        
+        }}
         >
           Prev
         </Button>
@@ -95,7 +101,12 @@ function Poster() {
           variant="contained" 
           endIcon={<ArrowForwardIosIcon />}
           onClick={nextImage}
-          sx={{ position: "absolute", right: 16, top: "50%", transform: "translateY(-50%)", bgcolor:"black" }}
+          sx={{ position: "absolute", right: 16, top: "50%", transform: "translateY(-50%)", bgcolor:"black" ,
+          '&:hover': {
+            color : "white",
+            backgroundColor: 'green',
+          },
+        }}
         >
           Next
         </Button>
