@@ -27,7 +27,7 @@ function Generate() {
   };
 
   // Example styles - replace with your actual styles
-  const availableStyles = ['Style1', 'Style2', 'Style3'];
+  const availableStyles = ['Art', 'Natural', 'Digital', 'Bokeh', 'moody', 'black-white', 'oil painting', 'cartoon', 'line art', 'wood carving', 'origami', 'colourful'];
 
   return (
     <Grid container spacing={2} alignItems="center" justifyContent="center" style={{ padding: '20px' }}>
@@ -41,14 +41,28 @@ function Generate() {
         />
       </Grid>
       <Grid item xs={12}>
-        <Button variant="contained" color="primary" onClick={generateImage}>
+        <Button variant="contained" color="primary" onClick={generateImage} 
+        sx = {{bgcolor : "black" , 
+            '&:hover': {
+                color : "white",
+                backgroundColor: 'green',
+              }
+        }}>
           Generate
         </Button>
       </Grid>
       <Grid item xs={12}>
         <Typography variant="h6">Choose styles:</Typography>
         {availableStyles.map((style) => (
-          <Button key={style} variant="outlined" onClick={() => addStyle(style)} startIcon={<AddCircleOutlineIcon />}>
+          <Button key={style} variant="outlined" onClick={() => addStyle(style)} startIcon={<AddCircleOutlineIcon />}
+          sx = {{color : "black",  variant : "contained",
+            '&:hover': {
+                color : "white",
+                backgroundColor: 'green',
+              }
+
+          }}
+          >
             {style}
           </Button>
         ))}
