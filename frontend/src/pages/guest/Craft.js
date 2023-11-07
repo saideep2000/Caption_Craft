@@ -3,6 +3,7 @@ import Header from '../components/Header';
 import Poster from '../components/Poster';
 import { Grid } from '@mui/material';
 import Footer from '../components/Footer';
+import Generate from '../components/Generate';
 
 function Home() {
   return (
@@ -13,6 +14,9 @@ function Home() {
         </Grid>
         <Grid item>
           <Poster />
+        </Grid>
+        <Grid item>
+          <Generate/>
         </Grid>
         <Grid item style={{ marginBottom: '-24px' }}> 
           <Footer />
