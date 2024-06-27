@@ -14,14 +14,16 @@ minikube addons enable ingress
 
 sudo vim /etc/hosts
 
-192.168.49.2 sprout.connect
-192.168.49.2 sprout.connect.backend
+192.168.49.2 caption.craft
+192.168.49.2 caption.craft.backend
 
 kubectl apply -f ingress.yaml
 
 kubectl rollout restart deployment/backend-deployment
 kubectl rollout restart deployment/frontend-deployment
 kubectl rollout restart deployment/ingress-nginx-controller -n ingress-nginx
+
+kubectl describe ingress caption-craft-ingress
 
 kubectl delete deployments --all
 

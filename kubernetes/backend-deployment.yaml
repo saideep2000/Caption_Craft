@@ -14,7 +14,20 @@ spec:
     spec:
       containers:
       - name: backend
-        image: saideepsamineni/caption-craft:backend-image
+        image: saideepsamineni/caption-craft:backend-image-latest
         imagePullPolicy: Always
         ports:
         - containerPort: 3000
+        # env:
+        # - name: MONGODB_URI
+        #   value: "mongodb+srv://caption-craft:R7MOIUbb43y7TJkv@cluster-craft.conjprb.mongodb.net/"
+        # - name: MONGODB_USER
+        #   valueFrom:
+        #     secretKeyRef:
+        #       name: mongodb-secret
+        #       key: username
+        # - name: MONGODB_PASSWORD
+        #   valueFrom:
+        #     secretKeyRef:
+        #       name: mongodb-secret
+        #       key: password
