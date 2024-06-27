@@ -12,7 +12,7 @@ import AudioCallingRoutes from './calling/audiocalling/routes.js';
 import VideoCallingRoutes from './calling/videocalling/routes.js';
 import {createServer} from 'http';
 
-mongoose.connect("mongodb+srv://caption-craft:R7MOIUbb43y7TJkv@cluster-craft.conjprb.mongodb.net/caption-craft");
+mongoose.connect(process.env.MONGO_LINK);
 
 const app = express()
 const httpServer = createServer(app)
@@ -20,7 +20,8 @@ app.use(
     cors({
     credentials: true,
     // origin: "http://localhost:3000",
-    origin: process.env.FRONTEND_URL,
+    // origin: process.env.FRONTEND_URL,
+    origin: true,
   })
  );
 
