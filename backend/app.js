@@ -48,7 +48,7 @@ MessageRoutes(app)
 AudioCallingRoutes(app)
 VideoCallingRoutes(app)
 
-httpServer.listen(process.env.PORT || 4000);
+// httpServer.listen(process.env.PORT || 4000);
 
 const port = process.env.PORT || 4000;
 
