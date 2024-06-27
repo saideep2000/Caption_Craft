@@ -30,4 +30,4 @@ COPY --from=build /app .
 EXPOSE 3000
 
 # Start the application
-CMD ["node", "server.js"]
+CMD ["node", "app.js"]
