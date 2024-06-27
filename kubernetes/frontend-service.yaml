@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: frontend-service
+  name: caption-craft-frontend-service
 spec:
   selector:
-    app: frontend
+    app: caption-craft-frontend
   ports:
     - protocol: TCP
       port: 80

@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: frontend-deployment
+  name: caption-craft-frontend-deployment
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: frontend
+      app: caption-craft-frontend
   template:
     metadata:
       labels:
-        app: frontend
+        app: caption-craft-frontend
     spec:
       containers:
-      - name: frontend
+      - name: caption-craft-frontend
         image: saideepsamineni/caption-craft:frontend-image
         imagePullPolicy: Always
         ports:

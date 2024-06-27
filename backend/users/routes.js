@@ -136,6 +136,10 @@ function UserRoutes(app) {
     // res.json(suggestPeople);
   };
 
+  const hi = async (req, res) => {
+    res.json("hi");
+  };
+
 
   // app.post("/api/users", createUser);
   // app.get("/api/users", findAllUsers);
@@ -146,6 +150,8 @@ function UserRoutes(app) {
   app.post("/api/users/signin", signin);
   // app.post("/api/users/signout", signout);
   // app.post("/api/users/account", account);
+
+  app.get("/api/captioncraft/hi", hi);
 
   app.post("/users/login", login);
   app.get("/users/all", findAllUsers);

@@ -19,11 +19,15 @@ sudo vim /etc/hosts
 
 kubectl apply -f ingress.yaml
 
-kubectl rollout restart deployment/backend-deployment
-kubectl rollout restart deployment/frontend-deployment
+kubectl rollout restart deployment/caption-craft-backend-deployment
+kubectl rollout restart deployment/caption-craft-frontend-deployment
 kubectl rollout restart deployment/ingress-nginx-controller -n ingress-nginx
 
 kubectl describe ingress caption-craft-ingress
+
+http://caption.craft/captioncraft/
+
+
 
 kubectl delete deployments --all
 

@@ -19,8 +19,8 @@ const httpServer = createServer(app)
 app.use(
     cors({
     credentials: true,
-    origin: "http://localhost:3000",
-    // origin: process.env.FRONTEND_URL,
+    // origin: "http://localhost:3000",
+    origin: process.env.FRONTEND_URL,
   })
  );
 
@@ -49,3 +49,7 @@ AudioCallingRoutes(app)
 VideoCallingRoutes(app)
 
 httpServer.listen(process.env.PORT || 4000);
+
+httpServer.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
+});
