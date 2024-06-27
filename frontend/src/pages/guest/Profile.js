@@ -14,11 +14,11 @@ function Profile() {
         <Grid item>
           <DisplayMessage message = "Profile"/>
         </Grid>
-        <Grid item style={{ marginBottom: '-24px' }}> 
+        <Grid item style={{ marginBottom: '-24px' }}>
           <Footer />
         </Grid>
       </Grid>
     </div>
   )
 }
-export default Profile
+export default Profile;
