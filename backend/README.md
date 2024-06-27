@@ -36,4 +36,4 @@ npm install socket.io
 
 ---
 
-**Note:** This is a backend with the NodeJs, Express, MongoDB.
+**Note:** This is a backend with the NodeJs, Express, MongoDB

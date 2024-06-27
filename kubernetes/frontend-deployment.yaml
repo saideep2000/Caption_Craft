@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: saideepsamineni/caption-craft/frontend-image:latest
+        image: saideepsamineni/caption-craft:frontend-image:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 80

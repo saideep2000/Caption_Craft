@@ -31,4 +31,4 @@ User : These pages are for the genuine logged In user Pages, these are different
 
 ---
 
-**Note:** This is a frontend with the React, Express, Axios, Redux.
+**Note:** This is a frontend with the React, Express, axios, redux.
